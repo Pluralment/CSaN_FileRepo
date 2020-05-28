@@ -1,0 +1,35 @@
+﻿@model FileRepo.Models.FileClass
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <center>
+        <h1>File repository</h1>
+        <h3>Sample project written on ASP.NET Core MVC platform</h3>
+        <br/>
+        <form method="post" enctype="multipart/form-data" asp-controller="File" asp-action="Upload">
+            <input type="file" name="fileObject" />
+            <input class="btn btn-outline-primary" type="submit" value="Upload" />
+            <hr/>
+            <table class="table">
+                <tr>
+                    <th>File Name</th>
+                    <th>Image</th>
+                    <th></th>
+                    <th></th>
+                    <th>Extension</th>
+                    @foreach (var item in Model.FileImage)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td><img src="~/Files/@item.Name" height="80" width="80" /></td>
+                            <td><a class="btn btn-outline-success" href="@Url.Action("Get", "File", new { filename = @item.Name})">Download</a></td>
+                            <td><a class="btn btn-outline-danger" href="@Url.Action("Remove", "File", new { filepath = @item.Name})">Remove</a></td>
+                            <td>@item.Extension</td>
+                        </tr>
+                    }
+                </tr>
+            </table>
+        </form>
+    </center>
+
