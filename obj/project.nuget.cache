@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DtmN18xJj40S3Y08JDxmWyqAq/oOD/EMDOJsG0en3wTYf1q0f2TenAstDFdIGHrzgFZksbxIElcO21yi/q/3Lw==",
+  "dgSpecHash": "TG9nSZrMW4j5ISMFr3yhr9hIR3GkA+SY8mWwWa0vKFb1m9RghdbJzaeklyZgctGzB61nW7/DKtZQ8Ip3o24Qew==",
   "success": true,
-  "projectFilePath": "E:\\POIT\\4 семестр\\КСИС\\FileRepo\\FileRepo.csproj",
+  "projectFilePath": "E:\\POIT\\4 семестр\\КСИС\\Лабы\\FileRepo\\FileRepo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\KIRILL\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\KIRILL\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

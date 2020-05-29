@@ -20,7 +20,6 @@ namespace FileRepo.Controllers
         [HttpPost]
         public async Task<IActionResult> Upload(IFormFile fileObject)
         {
-            //string ext = Path.GetExtension(fileObject.FileName);
             var filepath = Path.Combine(_FEnvironment.WebRootPath, "Files", fileObject.FileName);
             var stream = new FileStream(filepath, FileMode.Create);
             await fileObject.CopyToAsync(stream);
@@ -32,26 +31,11 @@ namespace FileRepo.Controllers
         [HttpGet]
         public IActionResult Get(string filename)
         {
-            /*
-            var filepath = Path.Combine("~/Files", filename);
-            var fileDirectory = Path.Combine(_FEnvironment.WebRootPath, "Files");
-            DirectoryInfo directoryInfo = new DirectoryInfo(fileDirectory);
-            FileInfo[] fileInfo = directoryInfo.GetFiles();
-            // Переборка всех файлов в директории.
-            foreach (var file in fileInfo)
-            {
-                if (file.Name == filename)
-                {
-                    return File(filepath, "application/octet-stream", filename);
-                }
-            }
-            return NotFound();
-            */
             var fileDirectory = Path.Combine(_FEnvironment.WebRootPath, "Files");
             var filepath = Path.Combine("~/Files", filename);
             if (CheckFileDir(fileDirectory, filename))
             {
-                return File(filepath, "application/octet-stream", filename);
+                return File(filepath, "application/unknown", filename);
             }
             else
             {
@@ -101,7 +85,6 @@ namespace FileRepo.Controllers
 
         private bool CheckFileDir(string filepath, string filename)
         {
-            //var fileDirectory = Path.Combine(_FEnvironment.WebRootPath, "Files");
             DirectoryInfo directoryInfo = new DirectoryInfo(filepath);
             FileInfo[] fileInfo = directoryInfo.GetFiles();
             // Переборка всех файлов в директории.

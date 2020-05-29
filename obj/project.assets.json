@@ -6076,11 +6076,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\POIT\\4 семестр\\КСИС\\FileRepo\\FileRepo.csproj",
+      "projectUniqueName": "E:\\POIT\\4 семестр\\КСИС\\Лабы\\FileRepo\\FileRepo.csproj",
       "projectName": "FileRepo",
-      "projectPath": "E:\\POIT\\4 семестр\\КСИС\\FileRepo\\FileRepo.csproj",
+      "projectPath": "E:\\POIT\\4 семестр\\КСИС\\Лабы\\FileRepo\\FileRepo.csproj",
       "packagesPath": "C:\\Users\\KIRILL\\.nuget\\packages\\",
-      "outputPath": "E:\\POIT\\4 семестр\\КСИС\\FileRepo\\obj\\",
+      "outputPath": "E:\\POIT\\4 семестр\\КСИС\\Лабы\\FileRepo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\KIRILL\\AppData\\Roaming\\NuGet\\NuGet.Config",
